@@ -18,8 +18,8 @@ playVoiceCheck.addEventListener(
 breatheIN();
 
 function breatheIN() {
-  text.innerText = 'Breathe In!';
-  sayMessage('breathe in');
+  text.innerText = 'Inhale!';
+  sayMessage('inhale');
   container.className = 'container grow';
   setTimeout(hold, timeBreatheIN);
 }
@@ -31,8 +31,8 @@ function hold() {
 }
 
 function breatheOut() {
-  text.innerText = 'Breathe Out!';
-  sayMessage('breathe out');
+  text.innerText = 'Exhale!';
+  sayMessage('exhale');
   container.className = 'container shrink';
   setTimeout(breatheIN, timeBreatheOut);
 }
