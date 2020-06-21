@@ -5,6 +5,8 @@ const playVoiceCheck = document.getElementById('play-voice');
 const timeBreatheIN = 4000;
 const timeHold = 7000;
 const timeBreatheOut = 8000;
+
+//Creating the utterance which we will use to speake the message.
 const utterance = new SpeechSynthesisUtterance();
 utterance.rate = 0.6;
 
@@ -19,21 +21,21 @@ breatheIN();
 
 function breatheIN() {
   text.innerText = 'Inhale!';
-  sayMessage('inhale');
   container.className = 'container grow';
   setTimeout(hold, timeBreatheIN);
+  sayMessage('inhale');
 }
 
 function hold() {
   text.innerText = 'Hold!';
-  sayMessage('hold');
   setTimeout(breatheOut, timeHold);
+  sayMessage('hold');
 }
 
 function breatheOut() {
   text.innerText = 'Exhale!';
-  sayMessage('exhale');
   container.className = 'container shrink';
+  sayMessage('exhale');
   setTimeout(breatheIN, timeBreatheOut);
 }
 
